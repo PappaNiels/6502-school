@@ -34,7 +34,7 @@ reset:
   lda #0         ; Clear RS/RW/E bits
   sta PORTA
 
-  lda #%00000110 ; Increment and shift cursor; don't shift display
+  lda #%00000110 ; Left to right and shift cursor; don't shift display
   sta PORTB
   lda #0         ; Clear RS/RW/E bits
   sta PORTA
