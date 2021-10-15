@@ -302,7 +302,8 @@ mdirdone:
   ; wall collision detection
   
   lda snake_y
-  bit #$f0            ; if any bit in the top nibble is set in snake_y
+  bit #$f0           ; if any bit in the top nibble is set in snake_y
+
   bne game_over       ; we hit the floor or ceiling
   lda snake_x
   cmp #20             ; if snake_x >= 20
