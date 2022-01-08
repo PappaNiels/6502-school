@@ -2,24 +2,12 @@ PORTB = $6000
 PORTA = $6001
 DDRB = $6002
 DDRA = $6003
-NUM = 27
 
 E  = %10000000
 RW = %01000000
 RS = %00100000
 
   .org $8000
-
-MULT10  
-    ASL NUM   ;multiply by 2
-    STA TEMP    ;temp store in TEMP
-    ASL         ;again multiply by 2 (*4)
-    ASL         ;again multiply by 2 (*8)
-    CLC
-    ADC TEMP    ;as result, A = x*8 + x*2
-    RTS
-
-TEMP    .byte 0
 
 reset:
   ldx #$ff
@@ -50,7 +38,7 @@ print:
 loop:
   jmp loop
 
-message: .asciiz NUM
+message: .asciiz "Hello, world!"
 
 lcd_wait:
   pha
