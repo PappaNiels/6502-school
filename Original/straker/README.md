@@ -1,0 +1,1 @@
+Open de html met een internet browser en je kan spelen. Met de pijltjes kan je de 'skake' bedienen.
